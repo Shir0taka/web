@@ -53,7 +53,8 @@ body {
     background-color: #00008B;
     color: #00BFFF;
     animation-name: a-hover;
-    animation-duration: 0.5s;
+    animation-duration: 0.15s;
+    border-radius: 10px;
 }
 
 @keyframes a-hover {
@@ -69,7 +70,8 @@ body {
 .links > a:not(:hover) {
     color: #00008B;
     animation-name: not-hover;
-    animation-duration: 0.5s;
+    animation-duration: 0.15s;
+    border-radius: 10px;
 }
 
 @keyframes not-hover {
