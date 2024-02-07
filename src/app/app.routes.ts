@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { AuthComponent } from './pages/auth/auth.component';
 import { NoPageComponent } from './pages/no-page/no-page.component';
+import { BooksComponent } from './pages/books/books.component';
 import { AddBookComponent } from './pages/add-book/add-book.component';
 
 export const routes: Routes = [
@@ -12,7 +13,8 @@ export const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'about', component: AboutComponent },
     { path: 'auth', component: AuthComponent },
-    { path: 'addBook', component: AddBookComponent },
+    { path: 'books', component: BooksComponent },
+    { path: 'books/addbook', component: AddBookComponent },
     
     //404
     { path: '**', component: NoPageComponent },

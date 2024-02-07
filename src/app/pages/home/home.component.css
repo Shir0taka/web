@@ -38,7 +38,7 @@ body {
 .links > a {
     color: #191970;
     padding: 0 25px;
-    font-size: 13px;
+    font-size: 24px;
     font-weight: 600;
     letter-spacing: .1rem;
     text-decoration: none;
@@ -47,4 +47,37 @@ body {
 
 .m-b-md {
     margin-bottom: 30px;
+}
+
+.links > a:hover {
+    background-color: #00008B;
+    color: #00BFFF;
+    animation-name: a-hover;
+    animation-duration: 0.5s;
+}
+
+@keyframes a-hover {
+    from {
+        color: #00008B;
+    }
+    to {
+        background-color: #00008B;
+        color: #00BFFF;
+    }
+}
+
+.links > a:not(:hover) {
+    color: #00008B;
+    animation-name: not-hover;
+    animation-duration: 0.5s;
+}
+
+@keyframes not-hover {
+    from {
+        background-color: #00008B;
+        color: #00BFFF;
+    }
+    to {
+        color: #00008B;
+    }
 }

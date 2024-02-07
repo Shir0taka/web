@@ -55,8 +55,6 @@ body {
     solid
     #191970;
     font-size: 42px;
-    padding: 10px;
-    border-radius: 10px;
 }
 
 .block {
@@ -118,42 +116,4 @@ body {
         background-color: #00008B;
         color: #00BFFF;
     }
-}
-
-.input {
-    width: 80%;
-    padding: 12px 20px;
-    margin: 8px;
-    box-sizing: border-box;
-    border: 
-    2px
-    solid
-    #00008B;
-    border-radius: 8px;
-    background-color: #AFEEEE;
-    color: #000080;
-    font-size: 24px;
-    text-align: center;
-}
-
-.input-num {
-    width: 29%;
-    padding: 12px 20px;
-    margin: 8px;
-    box-sizing: border-box;
-    border: 
-    2px
-    solid
-    #00008B;
-    border-radius: 8px;
-    background-color: #AFEEEE;
-    color: #000080;
-    font-size: 24px;
-    text-align: center;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
 }

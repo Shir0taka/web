@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../../api.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-add-book',
@@ -8,13 +7,6 @@ import { ApiService } from '../../api.service';
   templateUrl: './add-book.component.html',
   styleUrl: './add-book.component.css'
 })
+export class AddBookComponent {
 
-export class AddBookComponent{
-  exampleData: any[] = [];
-  
-  constructor() {}
-  
-  onButtonClick(): void {
-    
-  }
 }
