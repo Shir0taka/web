@@ -7,15 +7,15 @@
 
             <div class="border">
                 Name<br>
-                <input class="input" type="text"><br>
+                <input [(ngModel)]="bookName" class="input" type="text"><br>
                 Author<br>
-                <input class="input" type="text"><br>
+                <input [(ngModel)]="bookAuthor" class="input" type="text"><br>
                 Pages<br>
-                <input class="input-num" type="number"><br>
+                <input [(ngModel)]="bookPages" class="input-num" type="number"><br>
                 Price<br>
-                <input class="input-num" type="number"><br>
+                <input [(ngModel)]="bookPrice" class="input-num" type="number"><br>
             </div>
-            <button class="button">Add</button>
+            <button class="button" (click)="addNewBook()">Add</button>
         </div>
     </div>
 </body>

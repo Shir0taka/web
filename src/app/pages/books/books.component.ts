@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../../api.service';
+import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -14,8 +13,5 @@ export class BooksComponent{
   exampleData: any[] = [];
   
   constructor() {}
-  
-  onButtonClick(): void {
-    
-  }
+
 }

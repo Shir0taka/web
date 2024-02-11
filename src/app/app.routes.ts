@@ -7,6 +7,10 @@ import { AuthComponent } from './pages/auth/auth.component';
 import { NoPageComponent } from './pages/no-page/no-page.component';
 import { BooksComponent } from './pages/books/books.component';
 import { AddBookComponent } from './pages/add-book/add-book.component';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AddBookService } from './services/add-book/add-book.service';
 
 export const routes: Routes = [
     { path: '', redirectTo:'home', pathMatch: 'full' },
@@ -19,3 +23,5 @@ export const routes: Routes = [
     //404
     { path: '**', component: NoPageComponent },
 ];
+
+export class AppRoutingModule {}
