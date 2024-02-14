@@ -6,6 +6,4 @@ import { routes } from './app/app.routes';
 import { importProvidersFrom } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
-bootstrapApplication(AppComponent, {
-  providers: [provideRouter(routes), importProvidersFrom(HttpClientModule)],
-}).catch((err) => console.error(err));
+bootstrapApplication(AppComponent, appConfig).catch((err) => console.error(err));

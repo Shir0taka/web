@@ -157,3 +157,9 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+.response {
+    font-size: 24px;
+    color: #00008B;
+    margin: 10px;
+}

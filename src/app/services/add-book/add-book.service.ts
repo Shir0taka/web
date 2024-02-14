@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class AddBookService {
-  private apiUrl = 'http://127.0.0.1:8000/api/add-book';
+  private apiUrl = 'http://127.0.0.1:8000/api/store-book';
 
   constructor(private http: HttpClient) { }
 

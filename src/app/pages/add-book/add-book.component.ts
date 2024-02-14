@@ -16,14 +16,27 @@ export class AddBookComponent {
   bookPages: number = 0;
   bookPrice: number = 0;
 
+  responseRes: string = '';
+
   constructor(private addBookService: AddBookService) {}
 
   addNewBook() {
-    this.addBookService.addBook(this.bookName, this.bookAuthor, this.bookPages, this.bookPrice)
+
+    if(this.bookName == '' || 
+    this.bookAuthor == '' || 
+    this.bookPages == 0 || 
+    this.bookPrice == 0) {
+      this.responseRes = 'Fields are empty!';
+    } else {
+      this.addBookService.addBook(this.bookName, this.bookAuthor, this.bookPages, this.bookPrice)
       .subscribe((response) => {
-        console.log('Response recieved: ', response);
+        console.log('Response received: ', response);
+        this.responseRes = 'Book added successfully!';
+        message: 'Book added successfully!';
       }, (error) => {
-        console.log('Response lost: ', error);   
+        console.log('Response lost: ', error);
+        this.responseRes = 'Book failed to add!';   
       });
+    }
   }
 }
