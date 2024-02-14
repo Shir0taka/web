@@ -38,7 +38,7 @@ body {
 .links > a {
     color: #191970;
     padding: 0 25px;
-    font-size: 24px;
+    font-size: 13px;
     font-weight: 600;
     letter-spacing: .1rem;
     text-decoration: none;
@@ -49,37 +49,71 @@ body {
     margin-bottom: 30px;
 }
 
-.links > a:hover {
-    background-color: #00008B;
-    color: #00BFFF;
-    animation-name: a-hover;
-    animation-duration: 0.15s;
-    border-radius: 10px;
+.border {
+    border:
+    3px
+    solid
+    #191970;
+    font-size: 42px;
 }
 
-@keyframes a-hover {
+.block {
+    margin: 5px;
+    padding: 10px;
+    border-top: 
+    3px
+    solid
+    #191970;
+}
+
+.first-block {
+    margin: 2px;
+    padding: 10px;
+}
+
+.button {
+    background-color: #00008B;
+    border: none;
+    color: #00BFFF;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 20px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.button:hover {
+    background-color: #00BFFF;
+    color: #00008B;
+    animation-name: button-hover;
+    animation-duration: 0.5s;
+}
+
+@keyframes button-hover {
     from {
-        color: #00008B;
-    }
-    to {
         background-color: #00008B;
         color: #00BFFF;
     }
+    to {
+        background-color: #00BFFF;
+        color: #00008B;
+    }
 }
 
-.links > a:not(:hover) {
-    color: #00008B;
+.button:not(:hover) {
+    background-color: #00008B;
+    color: #00BFFF;
     animation-name: not-hover;
-    animation-duration: 0.15s;
-    border-radius: 10px;
+    animation-duration: 0.5s;
 }
 
 @keyframes not-hover {
     from {
-        background-color: #00008B;
-        color: #00BFFF;
+        background-color: #00BFFF;
+        color: #00008B;
     }
     to {
-        color: #00008B;
+        background-color: #00008B;
+        color: #00BFFF;
     }
 }
