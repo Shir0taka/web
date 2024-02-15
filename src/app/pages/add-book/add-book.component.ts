@@ -21,7 +21,6 @@ export class AddBookComponent {
   constructor(private addBookService: AddBookService) {}
 
   addNewBook() {
-
     if(this.bookName == '' || 
     this.bookAuthor == '' || 
     this.bookPages == 0 || 
@@ -32,7 +31,6 @@ export class AddBookComponent {
       .subscribe((response) => {
         console.log('Response received: ', response);
         this.responseRes = 'Book added successfully!';
-        message: 'Book added successfully!';
       }, (error) => {
         console.log('Response lost: ', error);
         this.responseRes = 'Book failed to add!';   
