@@ -9,9 +9,9 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
   
-  authUser() {
-    
+  authUser(name: string, email: string, password: string) {
+    const user = { name, email, password};
 
-    return this.http.get(this.apiUrl);
+    return this.http.post(this.apiUrl, user);
   }
 }

@@ -7,15 +7,15 @@
 
             <div class="border">
                 Name<br>
-                <input ngModel="userName" class="input" type="text"><br>
+                <input [(ngModel)]="userName" class="input" type="text"><br>
                 E-mail<br>
-                <input ngModel="userMail" class="input" type="text"><br>
+                <input [(ngModel)]="userMail" class="input" type="text"><br>
                 Password<br>
-                <input ngModel="userPassword" class="input" type="text"><br>
+                <input [(ngModel)]="userPassword" class="input" type="password"><br>
             </div>
-            <button class="button">Login</button>
+            <button class="button" (click)="authOldUser()">Login</button>
             <div class="response">
-                <p></p>                
+                <p>{{responseRes}}</p>                
             </div>
         </div>
     </div>

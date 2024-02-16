@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
+import { LoginService } from '../../services/login/login.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -9,5 +10,35 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  userName: string = '';
+  userMail: string = '';
+  userPassword: string = '';
 
+  responseRes: string = '';
+
+  constructor(private loginService: LoginService, private router: Router) {}
+
+  authOldUser() {
+    if(this.userName == '' || 
+    this.userMail == '' || 
+    this.userPassword == '') {
+      this.responseRes = 'Fields are empty!';
+    } else {
+      this.loginService.authUser(this.userName, this.userMail, this.userPassword)
+        .subscribe((response: any) => {
+          if (response['status'] == 'success') {
+            console.log('Response received: ', response);
+            this.responseRes = 'User logged successfully!';
+            this.router.navigate(['/home']);
+          } else {
+            console.log('Response received: ', response);
+            this.responseRes = 'Wrong fields!';
+          }
+          
+        }, (error) => {
+          console.log('Response lost: ', error);
+          this.responseRes = "Can't log in!";   
+        });
+    }
+  }
 }
