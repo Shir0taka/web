@@ -11,8 +11,8 @@ export class RegisterService {
   constructor(private http: HttpClient) { }
   
   regUser(name: string, email: string, password: string) {
-    const user = { name, email, password};
+    const user = { name, email, password };
 
-    return this.http.get(this.apiUrl);
+    return this.http.post(this.apiUrl, user);
   }
 }
