@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AddBookService } from '../../services/add-book/add-book.service';
 import { FormsModule } from '@angular/forms';
 
@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./add-book.component.css']
 })
 
-export class AddBookComponent {
+export class AddBookComponent implements OnInit{
   bookName: string = '';
   bookAuthor: string = '';
   bookPages: number = 0;
@@ -36,5 +36,9 @@ export class AddBookComponent {
         this.responseRes = 'Book failed to add!';   
       });
     }
+  }
+
+  ngOnInit(): void {
+      
   }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RegisterService } from '../../services/register/register.service';
 import { FormsModule } from '@angular/forms';
 
@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./register.component.css']
 })
 
-export class RegisterComponent {
+export class RegisterComponent implements OnInit{
   userName: string = '';
   userMail: string = '';
   userPassword: string = '';
@@ -34,5 +34,9 @@ export class RegisterComponent {
         this.responseRes = 'User failed to add!';   
       });
     }
+  }
+
+  ngOnInit(): void {
+      
   }
 }

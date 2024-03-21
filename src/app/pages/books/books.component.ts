@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -9,9 +9,12 @@ import { RouterLink } from '@angular/router';
   styleUrl: './books.component.css'
 })
 
-export class BooksComponent{
+export class BooksComponent implements OnInit{
   exampleData: any[] = [];
   
   constructor() {}
 
+  ngOnInit(): void {
+      
+  }
 }

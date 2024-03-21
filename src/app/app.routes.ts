@@ -7,10 +7,6 @@ import { LoginComponent } from './pages/login/login.component';
 import { NoPageComponent } from './pages/no-page/no-page.component';
 import { BooksComponent } from './pages/books/books.component';
 import { AddBookComponent } from './pages/add-book/add-book.component';
-import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
-import { AddBookService } from './services/add-book/add-book.service';
 import { RegisterComponent } from './pages/register/register.component';
 
 export const routes: Routes = [
@@ -20,7 +16,7 @@ export const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'books', component: BooksComponent },
     { path: 'books/addbook', component: AddBookComponent },
-    { path: 'register', component: RegisterComponent},
+    { path: 'register', component: RegisterComponent },
     
     //404
     { path: '**', component: NoPageComponent },
